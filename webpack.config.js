@@ -20,6 +20,15 @@ const config = {
         }),
         new CleanWebpackPlugin(),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.m?js/,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            }
+        ],
+    },
 };
 
 module.exports = config;
